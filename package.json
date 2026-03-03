@@ -7,8 +7,8 @@
   "license": "GPL-3.0",
   "scripts": {
     "init": "mate-scripts init",
-    "start": "browser-sync start --server --files 'index.html, src/**/*.css, src/**/*.js'",
-    "deploy": "gh-pages -d .",
+    "start": "parcel index.html",
+    "deploy": "gh-pages -d dist",
     "style-format": "npx stylelint 'src/**/*.scss' --fix --allow-empty-input",
     "format": "prettier --ignore-path .prettierignore --write './src/**/*.{html,css,scss}'",
     "lint": "npm run style-format && npm run format && mate-scripts lint",
@@ -26,6 +26,7 @@
     "@mate-academy/scripts": "^2.1.3",
     "@mate-academy/stylelint-config": "latest",
     "@parcel/transformer-sass": "^2.12.0",
+    "browser-sync": "^3.0.4",
     "cypress": "^13.13.0",
     "eslint": "^8.57.0",
     "eslint-plugin-cypress": "^3.3.0",
